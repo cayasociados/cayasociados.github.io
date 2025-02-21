@@ -1,0 +1,63 @@
+@use "../../../tools/mixins/mixins.scss" as *;
+@use "../../../tools/variables/variables.scss" as *;
+
+
+main{
+    .questions{
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 20px 10px;
+        .questions__container{
+            .questions__card{
+                width: 90%;
+                min-width: 288px;
+                max-width: 600px;
+                height: auto;
+                margin: 15px auto;
+                padding: 15px;
+                background: $primary-color;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+                text-align: center;
+
+                h2{
+                    font-size: 2rem;
+                    color: $primary-text-color;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color: $primary-text-color;
+                }
+            }
+        }
+
+        .questions__contact{
+            @include flexbox(column, null, center, center, null);
+            p{
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: $primary-text-color;
+                text-align: center;
+            }
+            .questions__button{
+                font-size: 1.6rem;
+                padding: 10px 20px;
+                background-color: $primary-color;
+                border: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                font-weight: bold;
+                color: $primary-text-color;
+                margin-top: 20px;
+                a{
+                    @include button-styles();
+                  
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin socialMedia($icon-url, $color: null) {
+    @if $color != null {
+        -webkit-mask-image: url($icon-url); 
+        mask-image: url($icon-url);        
+        -webkit-mask-repeat: no-repeat;    
+        mask-repeat: no-repeat;
+        -webkit-mask-size: cover;          
+        mask-size: cover;
+        background-color: $color;          
+    } @else {
+        background-image: url($icon-url);  
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,53 @@
+@use "../../tools/variables/variables.scss" as *;
+@use "../../tools/mixins/mixins.scss" as *;
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main{
+    .background-images {
+      img {
+        width: 80%;
+        height: auto;
+        margin-top: 40px;
+      }
+    }
+  
+    .main-section {
+      .main-section__hero {
+        width: 95%;
+        min-width: 320px;
+        max-width: 850px;
+        height: auto;
+  
+        h1 {
+          font-size: 2.1rem;
+        }
+  
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  
+    .product-detail {
+      padding: 20px;
+      .product-detail__logo {
+        width: 50px;
+        height: 35px;
+      }
+  
+      .product-detail__title {
+        margin-top: 40px;
+      }
+  
+      .product-detail__cards {
+        .product-detail__card {
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+    }
+
+  }
+  
+}

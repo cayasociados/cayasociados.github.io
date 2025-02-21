@@ -1,0 +1,36 @@
+@mixin flexbox($direction: null, $wrap: null, $justify: null, $align-items: null, $align-content: null){
+    display: flex;
+    @if $direction != null{
+      flex-direction: $direction;
+  
+    } else {
+      flex-direction: row;
+    }
+  
+    @if $wrap != null{
+      flex-wrap: $wrap;
+    } else {
+      flex-wrap: nowrap;
+    }
+  
+    @if $justify != null{
+      justify-content: $justify;
+    } else {
+      justify-content: flex-start;
+    }
+  
+    @if $align-items != null{
+      align-items: $align-items;
+    } else{
+      align-items: stretch;
+    }
+  
+    @if $align-content != null{
+      align-content: $align-content;
+    } else{
+      align-content: stretch;
+  
+    }
+}
+  
+  

@@ -1,0 +1,14 @@
+@use "tools/variables/variables";
+@use "base/reset";
+@use "base/typography";
+@use "layout/header";
+@use "tools/mixins/mixins";
+@use "layout/main-class";
+@use "responsive/tablet/main-tablet.scss";
+@use "responsive/desktop/header-desktop.scss";
+@use "responsive/desktop/main-desktop.scss";
+@use "responsive/tablet/header-tablet.scss";
+@use "pages/about/layout/about-main.scss";
+@use "responsive/desktop/main-about__desktop.scss";
+@use "layout/footer.scss";
+// @use "pages/contact/layout/contact-main.scss";

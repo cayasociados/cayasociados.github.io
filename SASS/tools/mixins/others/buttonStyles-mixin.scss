@@ -1,0 +1,17 @@
+
+@mixin button-styles{
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color original del texto en el botón */
+    
+    &:visited {
+      color: inherit; /* Asegúrate de que el color se mantenga igual después de visitar el enlace */
+    }
+    
+    &:hover {
+      color: inherit; /* Mantén el color cuando pasa el ratón */
+    }
+    
+    &:focus {
+      outline: none; /* Elimina el contorno de enfoque */
+    }
+}

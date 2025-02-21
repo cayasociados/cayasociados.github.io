@@ -1,0 +1,16 @@
+@mixin icon($url, $width, $height, $background-size: null) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    // Si no se pasa un background-size, se asigna un valor por defecto
+    @if $background-size != null {
+      background-size: $background-size;
+    } @else {
+      background-size: 100%;
+    }
+  }
+  

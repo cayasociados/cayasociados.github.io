@@ -1,0 +1,37 @@
+@use "../tools/mixins/mixins.scss" as *;
+@use "../tools/variables/variables.scss" as *;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body{
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 0;
+  inset: 0;
+}
+
+body.no-scroll{
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: fixed; /* Evita que el contenido se mueva */
+  top: 0;
+  left: 0;
+}
+
+
+

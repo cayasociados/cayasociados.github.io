@@ -1,0 +1,28 @@
+@use "../../tools/variables/variables.scss" as *;
+@use "../../tools/mixins/mixins.scss" as *;
+
+
+@media (min-width: 1025px) {
+    header{
+        .navbar{
+
+            .navbar__logo{
+                span{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .navbar__menu{
+                
+                right: 0;
+                width: 250px;
+                height: 100%;
+                left: auto;
+            }
+        }
+    }
+    
+}           
+    
+            
+  

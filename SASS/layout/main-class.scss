@@ -1,0 +1,180 @@
+@use "../tools/mixins/mixins.scss" as *;
+@use "../tools/variables/variables.scss" as *;
+
+
+
+
+main{
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    .background-images{
+        @include flexbox(null, null, center, center, null);
+        margin-bottom: 10px;
+        img{
+            margin-top: 50px;
+            max-width: 320px;
+            width: 70%;
+            height: 70%;
+        }
+
+    }
+
+    .main-section{
+        @include flexbox(column, null, center, null, null);
+        display: flex;
+        width: 100%;
+        min-width: 324px;
+        height: 334px;
+        text-align: center;
+        .main-section__hero{
+            width: 90%;
+            min-width: 288px;
+            max-width: 900px;
+            height: 218px;
+            text-align: center;
+            align-self: center;
+            h1{
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 2.6rem;
+                color: $primary-text-color;
+            }
+
+            p{
+                margin-top: 25px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.8rem;
+                color: $primary-text-color;
+            }
+            
+
+        }
+        
+
+    }
+
+    .product-detail{
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 20px 10px;
+        background-color: #333;
+
+        .product-detail__logo{
+            position: absolute;
+            width: 40px;
+            height: 25px;
+            background-image: url("../../Assets/icons/svg/Ahorro.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%); // Centra el elemento correctamente
+
+        }
+
+        .product-detail__title{
+            width: 90%;
+            min-width: 288px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+
+            h2{
+                margin-bottom: 20px;
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 2.6rem;
+                color: $primary-text-color;
+
+            }
+
+            p{
+                margin-bottom: 20px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.8;
+                color: #B0B0B0;
+
+            }
+
+        }
+        .product-detail__cards{
+            .product-detail__card{
+                width: 90%;
+                min-width: 288px;
+                max-width: 400px;
+                height: 200px;
+                margin: 15px auto;
+                padding: 15px;
+                background: $gradient;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+                .product-detail__card-logo{
+                    display: inline-block;
+                    @include icon("../../Assets/icons/svg/tranquilidad-icon.svg", 30px, 30px, cover);
+                    margin-bottom: 10px;
+                    filter: invert(32%) sepia(88%) saturate(747%) hue-rotate(210deg);
+    
+                }
+
+                .product-detail__card-logo--two{
+                    display: inline-block;
+                    @include icon("../../Assets/icons/svg/seguridad-icon.svg", 30px, 30px, cover);
+                    margin-bottom: 10px;
+                    filter: invert(32%) sepia(88%) saturate(747%) hue-rotate(210deg);
+    
+                }
+                .product-detail__card-logo--three{
+                    display: inline-block;
+                    @include icon("../../Assets/icons/svg/engaños-icon.svg", 30px, 30px, cover);
+                    margin-bottom: 10px;
+                    filter: invert(32%) sepia(88%) saturate(747%) hue-rotate(210deg);
+    
+                }
+                
+                .product-detail__card-logo--four{
+                    display: inline-block;
+                    @include icon("../../Assets/icons/svg/sin-limites-icon.svg", 30px, 30px, cover);
+                    margin-bottom: 10px;
+                    filter: invert(32%) sepia(88%) saturate(747%) hue-rotate(210deg);
+    
+                }
+
+                .product-detail__card-title{
+                    margin-bottom: 15px;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    line-height: 1.8rem;
+                    color: $primary-text-color;
+                }
+
+                .product-detail__card-description{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    height: 1.8rem;
+                    color: #B0B0B0;
+                }
+
+            }
+
+            
+
+        }
+    }
+   
+    
+    
+    
+   
+    
+   
+    
+
+    
+    
+}

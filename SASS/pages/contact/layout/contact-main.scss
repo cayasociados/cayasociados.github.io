@@ -1,0 +1,42 @@
+@use "../../../tools/mixins/mixins.scss" as *;
+@use "../../../tools/variables/variables.scss" as *;
+
+main{
+    .social-media{
+        .social-media__title{
+            text-align: center;
+            font-size: 2.8rem;
+            color: $primary-text-color;
+        }
+        .social-media__cards{
+            position: relative;
+            width: 100%;
+            min-width: 320px;
+            height: auto;
+            padding: 20px 10px;
+            .social-media__card{
+                @include flexbox(null, null, center, center, null);
+                width: 90%;
+                min-width: 288px;
+                max-width: 600px;
+                height: auto;
+                margin: 15px auto;
+                padding: 15px;
+                background: $primary-color;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+                text-align: center;
+                .social-media__icon--facebook{
+                    @include socialMedia("../../../../Assets/icons/svg/social-media/svg/facebook.svg", #FFFF);
+                    width: 40px;
+                    height: 40px;
+                }
+                .social-media__icon--instagram{
+                    @extend .social-media__icon--facebook;
+                    @include socialMedia("../../../../Assets/icons/svg/social-media/svg/instagram.svg", #FFFF)
+
+                }
+            }
+        }
+    }
+}

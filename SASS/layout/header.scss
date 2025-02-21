@@ -1,0 +1,91 @@
+@use "../tools/mixins/mixins" as *;
+@use "../tools/variables/variables" as *;
+
+header {
+    .navbar {
+        @include flexbox(null, null, space-between, center, null);
+        background-color: $primary-color;
+        padding: 15px 20px;
+
+        .navbar__logo {  
+            @include icon("../../Assets/icons/svg/icono-camacho.svg", 40px, 40px, cover);
+            
+        }
+
+        .navbar__menu-checkbox {
+            display: none;
+        }
+
+        .navbar__menu-icon {
+            @include flexbox(column, null, null, null, null);
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            z-index: 1001; // Asegúrate de que el icono esté encima del menú
+            
+            span {
+                background: white;
+                width: 30px;
+                height: 4px;
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+        }
+
+        .navbar__menu {
+            position: fixed;
+            top: 0; // Asegúrate de que esté en la parte superior de la página
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: $gradient;
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000; // Menú debajo del icono
+            li{
+                width: 80%;
+                text-align: center;
+                padding: 10px 0;
+                list-style: none;
+
+                a {
+                    display: block;
+                    padding: 10px 20px;
+                    color: $primary-text-color;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .navbar__menu-checkbox:checked ~ .navbar__menu {
+            transform: translateX(0);
+        }
+
+        .navbar__menu-checkbox:checked ~ .navbar__menu-icon span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .navbar__menu-checkbox:checked ~ .navbar__menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navbar__menu-checkbox:checked ~ .navbar__menu-icon span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .navbar__menu-checkbox:checked ~ body {
+            overflow: hidden; // Bloquear el desplazamiento del body cuando el menú está visible
+        }
+
+        .navbar__menu-checkbox:checked ~ .navbar__menu {
+            z-index: 1000; // El menú debe estar encima del contenido
+        }
+    }
+}

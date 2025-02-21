@@ -1,0 +1,19 @@
+@use "../../tools/mixins/mixins.scss" as *;
+@use "../../tools/variables/variables.scss" as *;
+
+@media (min-width: 1025px) {
+
+    main{
+        .questions{
+            .questions__container{
+                @include flexbox(null, wrap, center, center, null);
+                width: 930px;
+                margin: 0 auto;
+                .questions__card{
+                    width: 100%;
+                    max-width: 350px;
+                }
+            }
+        }
+    }
+}

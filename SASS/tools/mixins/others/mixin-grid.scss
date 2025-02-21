@@ -1,0 +1,84 @@
+@mixin grid(
+  $columns: auto, 
+  $rows: auto, 
+  $gap: 0, 
+  $justify-items: stretch, 
+  $align-items: stretch, 
+  $justify-content: start, 
+  $align-content: start, 
+  $grid-auto-columns: auto, 
+  $grid-auto-rows: auto, 
+  $grid-template-areas: none
+) {
+  display: grid;
+
+  // grid-template-columns: Por defecto, auto si no se define
+  @if $columns != auto {
+    grid-template-columns: $columns;
+  } @else {
+    grid-template-columns: auto;
+  }
+
+  // grid-template-rows: Por defecto, auto si no se define
+  @if $rows != auto {
+    grid-template-rows: $rows;
+  } @else {
+    grid-template-rows: auto;
+  }
+
+  // gap: Por defecto, 0 si no se define
+  @if $gap != 0 {
+    gap: $gap;
+  } @else {
+    gap: 0;
+  }
+
+  // justify-items: Por defecto, stretch si no se define
+  @if $justify-items != stretch {
+    justify-items: $justify-items;
+  } @else {
+    justify-items: stretch;
+  }
+
+  // align-items: Por defecto, stretch si no se define
+  @if $align-items != stretch {
+    align-items: $align-items;
+  } @else {
+    align-items: stretch;
+  }
+
+  // justify-content: Por defecto, start si no se define
+  @if $justify-content != start {
+    justify-content: $justify-content;
+  } @else {
+    justify-content: start;
+  }
+
+  // align-content: Por defecto, start si no se define
+  @if $align-content != start {
+    align-content: $align-content;
+  } @else {
+    align-content: start;
+  }
+
+  // grid-auto-columns: Por defecto, auto si no se define
+  @if $grid-auto-columns != auto {
+    grid-auto-columns: $grid-auto-columns;
+  } @else {
+    grid-auto-columns: auto;
+  }
+
+  // grid-auto-rows: Por defecto, auto si no se define
+  @if $grid-auto-rows != auto {
+    grid-auto-rows: $grid-auto-rows;
+  } @else {
+    grid-auto-rows: auto;
+  }
+
+  // grid-template-areas: Por defecto, none si no se define
+  @if $grid-template-areas != none {
+    grid-template-areas: $grid-template-areas;
+  } @else {
+    grid-template-areas: none;
+  }
+}

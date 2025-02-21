@@ -1,0 +1,19 @@
+
+/////Responsive Navbar///////
+
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Ocultar el ícono en pantallas grandes */
+    }
+
+    .menu {
+        position: static;
+        width: auto;
+        display: flex;
+        background: none;
+    }
+
+    .menu li {
+        padding: 0 15px;
+    }
+}
