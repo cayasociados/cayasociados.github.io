@@ -222,7 +222,7 @@ main .product-detail .product-detail__logo {
   background-size: contain;
   background-repeat: no-repeat;
   top: -10px;
-  left: 51%;
+  left: 50%;
 }
 main .product-detail .product-detail__title {
   width: 90%;
