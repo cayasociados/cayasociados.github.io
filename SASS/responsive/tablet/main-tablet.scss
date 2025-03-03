@@ -4,27 +4,13 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main{
-    .background-images {
-      img {
-        width: 80%;
-        height: auto;
-        margin-top: 40px;
-      }
-    }
+    
   
     .main-section {
-      .main-section__hero {
-        width: 95%;
-        min-width: 320px;
-        max-width: 850px;
-        height: auto;
-  
-        h1 {
-          font-size: 2.1rem;
-        }
-  
-        p {
-          font-size: 1.3rem;
+
+      .background-images{
+        .main-section__logo-image{
+          width: 300px;
         }
       }
     }

@@ -131,7 +131,7 @@ header .navbar .navbar__menu li a {
   color: #F1F1F1;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 header .navbar .navbar__menu-checkbox:checked ~ .navbar__menu {
   transform: translateX(0);
@@ -157,78 +157,54 @@ main {
   height: auto;
   min-width: 320px;
 }
-main .background-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-main .background-images else {
-  flex-direction: row;
-}
-main .background-images else {
-  flex-wrap: nowrap;
-}
-main .background-images else {
-  justify-content: flex-start;
-}
-main .background-images else {
-  align-items: stretch;
-}
-main .background-images else {
-  align-content: stretch;
-}
-main .background-images img {
-  margin-top: 50px;
-  max-width: 320px;
-  width: 70%;
-  height: 70%;
-}
 main .main-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
+  /*.main-section__hero{
+      width: 90%;
+      min-width: 288px;
+      max-width: 900px;
+      height: 218px;
+      text-align: center;
+      align-self: center;
+      h1{
+          font-size: 2.4rem;
+          font-weight: bold;
+          line-height: 2.6rem;
+          color: $primary-text-color;
+      }
+
+      p{
+          margin-top: 25px;
+          font-size: 1.4rem;
+          font-weight: 500;
+          line-height: 1.8rem;
+          color: $primary-text-color;
+      }
+
+
+  } */
+}
+main .main-section .background-images {
+  position: relative;
   width: 100%;
-  min-width: 324px;
-  height: 334px;
-  text-align: center;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
 }
-main .main-section else {
-  flex-direction: row;
+main .main-section .background-images .main-section__main-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-main .main-section else {
-  flex-wrap: nowrap;
-}
-main .main-section else {
-  justify-content: flex-start;
-}
-main .main-section else {
-  align-items: stretch;
-}
-main .main-section else {
-  align-content: stretch;
-}
-main .main-section .main-section__hero {
-  width: 90%;
-  min-width: 288px;
-  max-width: 900px;
-  height: 218px;
-  text-align: center;
-  align-self: center;
-}
-main .main-section .main-section__hero h1 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  line-height: 2.6rem;
-  color: #F1F1F1;
-}
-main .main-section .main-section__hero p {
-  margin-top: 25px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.8rem;
-  color: #F1F1F1;
+main .main-section .background-images .main-section__logo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: auto;
 }
 main .product-detail {
   position: relative;
@@ -236,7 +212,7 @@ main .product-detail {
   min-width: 320px;
   height: auto;
   padding: 20px 10px;
-  background-color: #333;
+  background-color: #324359;
 }
 main .product-detail .product-detail__logo {
   position: absolute;
@@ -246,8 +222,7 @@ main .product-detail .product-detail__logo {
   background-size: contain;
   background-repeat: no-repeat;
   top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 51%;
 }
 main .product-detail .product-detail__title {
   width: 90%;
@@ -278,7 +253,7 @@ main .product-detail .product-detail__cards .product-detail__card {
   height: 200px;
   margin: 15px auto;
   padding: 15px;
-  background: linear-gradient(145deg, #2E2E2E, #3D3D3D);
+  background: #152C40;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 }
@@ -340,27 +315,20 @@ main .product-detail .product-detail__cards .product-detail__card .product-detai
 main .product-detail .product-detail__cards .product-detail__card .product-detail__card-description {
   font-size: 1.4rem;
   font-weight: 500;
-  height: 1.8rem;
   color: #B0B0B0;
 }
-
+main .product-detail .product-detail__cards .product-detail__card--two, main .product-detail .product-detail__cards .product-detail__card--four {
+  background-color: #B0B0B0;
+}
+main .product-detail .product-detail__cards .product-detail__card--two .product-detail__card-title--two, main .product-detail .product-detail__cards .product-detail__card--four .product-detail__card-title--two, main .product-detail .product-detail__cards .product-detail__card--four .product-detail__card-title--four {
+  color: #333;
+}
+main .product-detail .product-detail__cards .product-detail__card--two .product-detail__card-description--two, main .product-detail .product-detail__cards .product-detail__card--four .product-detail__card-description--two, main .product-detail .product-detail__cards .product-detail__card--four .product-detail__card-description--four {
+  color: #333;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
-  main .background-images img {
-    width: 80%;
-    height: auto;
-    margin-top: 40px;
-  }
-  main .main-section .main-section__hero {
-    width: 95%;
-    min-width: 320px;
-    max-width: 850px;
-    height: auto;
-  }
-  main .main-section .main-section__hero h1 {
-    font-size: 2.1rem;
-  }
-  main .main-section .main-section__hero p {
-    font-size: 1.3rem;
+  main .main-section .background-images .main-section__logo-image {
+    width: 300px;
   }
   main .product-detail {
     padding: 20px;
@@ -388,17 +356,30 @@ main .product-detail .product-detail__cards .product-detail__card .product-detai
     height: 100%;
     left: auto;
   }
+  header .navbar .navbar__menu li a {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1025px) {
+  main .main-section .background-images .main-section__logo-image {
+    width: 350px;
+  }
   main .product-detail {
     padding: 20px;
   }
   main .product-detail .product-detail__logo {
     width: 50px;
-    height: 35px;
+    height: 50px;
+    left: 50%;
   }
   main .product-detail .product-detail__title {
     margin-top: 40px;
+  }
+  main .product-detail .product-detail__title h2 {
+    font-size: 2.8rem;
+  }
+  main .product-detail .product-detail__title p {
+    font-size: 1.8rem;
   }
   main .product-detail .product-detail__cards {
     display: flex;
@@ -423,7 +404,13 @@ main .product-detail .product-detail__cards .product-detail__card .product-detai
   }
   main .product-detail .product-detail__cards .product-detail__card {
     width: 100%;
-    max-width: 350px;
+    max-width: 420px;
+  }
+  main .product-detail .product-detail__cards .product-detail__card .product-detail__card-title {
+    font-size: 1.8rem;
+  }
+  main .product-detail .product-detail__cards .product-detail__card .product-detail__card-description {
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -458,6 +445,16 @@ main .questions .questions__container .questions__card h2 {
 main .questions .questions__container .questions__card p {
   font-size: 1.5rem;
   color: #F1F1F1;
+  font-weight: 500;
+}
+main .questions .questions__container .questions__card--two {
+  background-color: #B0B0B0;
+}
+main .questions .questions__container .questions__card--two h2 {
+  color: #333;
+}
+main .questions .questions__container .questions__card--two p {
+  color: #333;
 }
 main .questions .questions__contact {
   display: flex;
@@ -544,7 +541,7 @@ footer {
   display: flex;
   width: 100%;
   height: 150px;
-  background: #324359;
+  background: #152C40;
 }
 footer else {
   flex-direction: row;
@@ -599,6 +596,23 @@ footer .left {
   font-size: 1.4rem;
   color: #F1F1F1;
   font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer .left p {
+    font-size: 1.8rem;
+  }
+  footer .right ul li {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1025px) {
+  footer .left p {
+    font-size: 2rem;
+  }
+  footer .right ul li {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

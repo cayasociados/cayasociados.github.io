@@ -2,34 +2,55 @@
 @use "../../tools/variables/variables.scss" as *;
 
 @media (min-width: 1025px) {
-    main{
-        .product-detail {
-            padding: 20px;
-            .product-detail__logo {
-              width: 50px;
-              height: 35px;
-            }
-        
-            .product-detail__title {
-              margin-top: 40px;
-            }
-        
-            .product-detail__cards {
-              @include flexbox(null, wrap, null, null, null);
-              width: 930px;
-              margin: 0 auto;
-              .product-detail__card {
-                width: 100%;
-                max-width: 350px;
-              }
-            }
+  main{
+    .main-section {
+
+      .background-images{
+        .main-section__logo-image{
+          width: 350px;
         }
-      
-        
+      }
     }
+    .product-detail{
+      padding: 20px;
+      .product-detail__logo{
+        width: 50px;
+        height: 50px;
+        left: 50%;
+      }
+      .product-detail__title{
+        h2{
+          font-size: 2.8rem;
+        }
+        p{
+          font-size: 1.8rem;
+        }
+        margin-top: 40px;
+      }
+      .product-detail__cards{
+        @include flexbox(null, wrap, null, null, null);
+        width: 930px;
+        margin: 0 auto;
+        .product-detail__card {
+          width: 100%;
+          max-width: 420px;
+          .product-detail__card-title{
+            font-size: 1.8rem;
+          }
+          .product-detail__card-description{
+            font-size: 1.6rem;
+          }
+        }
+
+      }
+    }
+  }
+  
+}
+
+
 
 
     
-}
 
 
